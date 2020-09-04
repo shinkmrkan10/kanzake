@@ -7,6 +7,8 @@
     <title>Displaying in a HTML table</title>
 </head>
 <body>
+<table>
+<tr><td>
 <table border="1">
     <tr>
         <th>Date</th>
@@ -54,6 +56,8 @@ if (!$result){
     die ("Could not query the database: <br />". mysql_error(  ));
 }
 echo <<<EOD
+</table>
+</td></tr>
 </table>
 <table border="1">
     <tr>
