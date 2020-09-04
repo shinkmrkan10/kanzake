@@ -45,10 +45,10 @@ $a_agent = $_SERVER["HTTP_USER_AGENT"];
 $a_host = gethostbyaddr($a_ip);
 $a_ref = $_SERVER["HTTP_REFERER"];
 $time_st_p = $a_date . " " . $a_time ;
-$m_date = date("Y-m%", $time_st);
+$m_date = date("Y-m", $time_st);
 $m_month = date("F", $time_st);
 
-$query = "insert into counter values(NULL,'$time_st_p','$a_host','$a_ref','$m_date')";
+$query = "insert into counter values(NULL,'$time_st_p','$a_host','$a_ref','$a_date')";
 
 $result = $connection->query($query);
 
