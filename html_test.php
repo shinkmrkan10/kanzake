@@ -57,8 +57,18 @@ if (!$result){
 }
 echo <<<EOD
 </table>
-</td></tr>
+</td>
+<td>
+<table border="1">
+    <tr>
+        <th>Count</th>
+        <th>date</th>
+    </tr>
 </table>
+</td>
+</tr>
+</table>
+<hr />
 <table border="1">
     <tr>
         <th>Counter</th>
