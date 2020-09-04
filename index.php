@@ -91,7 +91,7 @@ Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
 <a href="kanzake.htm">ごあいさつ</a>
 　｜　<a href="https://shinkmrkan10.blogspot.jp">燗酒普及協会ブログ</a>
 </p>
-次の活動予定　：未定です。<br>
+次の活動予定　：現在の情勢を考慮し活動自粛中です。<br>
 2019年10月6日(日)<a href="http://www.taruichi.co.jp/blog/2016/07/post-1594.html">樽一会</a>にて燗付けいたしました。<br>
 2019年6月30日(日)<a href="jpeg/nf2018.jpg">日本酒フェスティバル</a>、協力参加いたしました。<br>
 <hr width=80%>
