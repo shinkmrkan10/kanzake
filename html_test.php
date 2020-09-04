@@ -42,7 +42,7 @@ for ($i=0;$i<3;$i++)
     $a_date = $row["a_date"] ;
     $a_count = $row["d_count"] ;
     echo "<tr>" ;
-    echo "<td>$a_count</td>" ;
+    echo '<td align="right">'."$a_count</td>" ;
     echo "<td>$a_date</td>" ;
     echo "</tr>" ;
 }
