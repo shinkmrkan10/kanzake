@@ -29,6 +29,26 @@ if (!$db_select){
     die ("Could not select the database: <br />". mysql_error(  ));
 }
 //    クエリを作成する
+$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by a_date desc " ;
+//    クエリの実行
+$result = mysql_query ( $query ) ;
+if (!$result){
+    die ("Could not query the database: <br />". mysql_error(  ));
+}
+
+
+//    結果から行を取得して表示する
+for ($i=0;$i<10;$i++)
+{
+    $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
+    $a_date = $row["a_date"] ;
+    $a_count = $row["d_count"] ;
+    echo "<tr>" ;
+    echo "<td>$a_date</td>" ;
+    echo "<td>$a_count</td>" ;
+    echo "</tr>" ;
+}
+//    クエリを作成する
 $query = "SELECT  *  FROM  counter order by counter_id desc " ;
 //    クエリの実行
 $result = mysql_query ( $query ) ;
