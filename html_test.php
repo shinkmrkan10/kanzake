@@ -38,7 +38,7 @@ if (!$result){
 
 
 //    結果から行を取得して表示する
-for ($i=0;$i<50;$i++)
+for ($i=0;$i<100;$i++)
 {
     $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
     $counter_id = $row["counter_id"] ;
@@ -53,7 +53,7 @@ for ($i=0;$i<50;$i++)
     echo "</tr>" ;
 }
 //    クエリを作成する
-$query = "DELETE  FROM  counter where counter_id < $counter_id " ;
+//$query = "DELETE  FROM  counter where counter_id < $counter_id " ;
 //    クエリの実行
 $result = mysql_query ( $query ) ;
 if (!$result){
