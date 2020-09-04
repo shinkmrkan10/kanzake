@@ -10,6 +10,7 @@ echo <<<EOD
     <tr>
         <th>Date</th>
         <th>Count</th>
+        <th>Count graph</th>
     </tr>
 
 EOD;
@@ -43,6 +44,12 @@ for ($i=0;$i<10;$i++)
     echo "<tr>" ;
     echo "<td>$a_date</td>" ;
     echo "<td>$a_count</td>" ;
+    echo "<td>" ;
+    for ($j=1;$j<$a_count;$j++)
+    {
+        echo "*" ;
+    }
+    echo "</td>" ;
     echo "</tr>" ;
 }
 echo <<<EOD
