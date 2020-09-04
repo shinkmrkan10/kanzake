@@ -2,7 +2,7 @@
 include('html_header.php');
 $html_title='Display of access log';
 html_header($html_title);
-?>
+echo <<<EOD
 <body>
 <table>
 <tr><td>
@@ -12,7 +12,7 @@ html_header($html_title);
         <th>Count</th>
     </tr>
 
-<?php
+EOD;
 //    ログイン情報をインクルードする
 include('db_login.php');
 //    接続する
@@ -123,7 +123,9 @@ for ($i=0;$i<100;$i++)
 
 //    接続を閉じる
 mysql_close ( $connection ) ;
-?>
+echo <<<EOD
 </table>
 </body>
 </html>
+EOD;
+?>
