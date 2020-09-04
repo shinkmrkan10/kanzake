@@ -1,7 +1,8 @@
-﻿<html>
-<head>
-<title>燗酒普及協会(since Sep.9 1998)</title>
-</head>
+﻿<?php
+include('html_header.php');
+$html_title='燗酒普及協会(since Sep.9 1998)';
+html_header($html_title);
+?>
 <body bgcolor="#5f0000" text="#00fffff" link="#00ff00" alink="#0000ff" vlink="#cfcfcf">
 <center>
 <hr width=80%>
