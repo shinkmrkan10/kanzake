@@ -6,12 +6,7 @@ echo <<<EOD
 <body>
 <table>
 <tr><td>
-<table border="1">
-    <tr>
-        <th>Date</th>
-        <th>Count</th>
-        <th>Count graph</th>
-    </tr>
+<table>
 
 EOD;
 //    ログイン情報をインクルードする
@@ -43,7 +38,7 @@ for ($i=0;$i<10;$i++)
     $a_count = $row["d_count"] ;
     echo "<tr>" ;
     echo "<td>$a_date</td>" ;
-    echo "<td>$a_count</td>" ;
+    echo "<td>($a_count)</td>" ;
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
