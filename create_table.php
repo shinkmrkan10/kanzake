@@ -1,0 +1,20 @@
+﻿<?php
+include ('db_login.php');
+require_once ('DB.php');
+    $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+if  ( !$connection )
+{
+    die ("Could not connect to the database :  <br>" . DB::errorMessage( ));
+}
+$query = 'CREATE TABLE counter (
+                                counter_id int(11) NOT NULL auto_increment,
+                                accessed timestamp NOT NULL,
+                   PRIMARY KEY (counter_id))';
+$result = $connection->query($query);
+if (DB::isError($result))
+{
+    die ("Could not query the database : <br>".$query. " ".DB::errorMessage($result));
+}
+echo ("Table created successfully!");
+$connection->disconnect( );
+?>
