@@ -7,7 +7,7 @@ if  ( !$connection )
     die ("Could not connect to the database :  <br>" . DB::errorMessage( ));
 }
 $query = 'ALTER TABLE counter ADD 
-                                a_ref text';
+                                a_date text';
 $result = $connection->query($query);
 if (DB::isError($result))
 {
