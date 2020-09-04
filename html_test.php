@@ -19,8 +19,6 @@ echo <<<EOD
 <body>
 <table>
 <tr><td>
-<table>
-<td>
 <table border="1">
     <tr>
         <th>Count</th>
@@ -51,6 +49,8 @@ for ($i=0;$i<3;$i++)
 echo <<<EOD
 </table>
 </td>
+<td>
+<table>
 
 EOD;
 //    クエリを作成する。日付ごとのアクセス総数
