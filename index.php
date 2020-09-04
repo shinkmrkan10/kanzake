@@ -25,17 +25,16 @@ echo <<<EOD
 <img src="gif/mise.gif" alt="店" border=0>
 </th><th colspan=3>
 EOD;
-error_reporting(0);
-require_once ('db_login.php');
 
+error_reporting(0);
+
+require_once ('db_login.php');
 require_once ('DB.php');
 
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 
 if (DB::isError($connection)) {
-
     die ("Could not connect to the database :  <br>" . DB::errorMessage($connection));
-
 }
 $time_st = time( );
 $a_date = date("Y-m-d", $time_st);
@@ -49,15 +48,12 @@ $m_date = date("Y-m", $time_st);
 $m_month = date("F", $time_st);
 
 $query = "insert into counter values(NULL,'$time_st_p','$a_host','$a_ref','$a_date')";
-
 $result = $connection->query($query);
 
 if (DB::isError($result))
 
 {
-
     die ("Could not query the database : <br>".$query. " ".DB::errorMessage($result));
-
 }
 $timestamp=time( );
 $month=date("m",$timestamp);
@@ -80,7 +76,6 @@ else
 echo ('<img src="');
 echo ("gif/$image");
 echo ('" border=0><br>');
-$connection->disconnect( );
 echo <<<EOD
 Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
 </th><th>
@@ -103,4 +98,5 @@ Copyright(C) 1998-2004 Kanzake Fukyu Kyoukai, All Rights Reserved.
 </body>
 </html>
 EOD;
+$connection->disconnect( );
 ?>
