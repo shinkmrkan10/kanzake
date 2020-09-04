@@ -9,10 +9,8 @@
 <body>
 <table border="1">
     <tr>
-        <th>Counter</th>
-        <th>Timestamp</th>
-        <th>Access host</th>
-        <th>Referer</th>
+        <th>Date</th>
+        <th>Count</th>
     </tr>
 
 <?php
@@ -55,7 +53,16 @@ $result = mysql_query ( $query ) ;
 if (!$result){
     die ("Could not query the database: <br />". mysql_error(  ));
 }
-
+echo <<<EOD
+</table>
+<table border="1">
+    <tr>
+        <th>Counter</th>
+        <th>Timestamp</th>
+        <th>Access host</th>
+        <th>Referer</th>
+    </tr>
+EOD;
 
 //    結果から行を取得して表示する
 for ($i=0;$i<100;$i++)
