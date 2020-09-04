@@ -71,7 +71,7 @@ for ($i=0;$i<10;$i++)
     $a_count = $row["d_count"] ;
     echo "<tr>" ;
     echo "<td>$a_date</td>" ;
-    printf("<td>(%3d)</td>",$a_count) ;
+    printf("<td><pre>(%3d)</pre></td>",$a_count) ;
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
