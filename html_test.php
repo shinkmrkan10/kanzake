@@ -75,7 +75,7 @@ for ($i=0;$i<10;$i++)
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
-        echo "*" ;
+        echo "■" ;
     }
     echo "</td>" ;
     echo "</tr>" ;
