@@ -51,39 +51,37 @@ for ($i=0;$i<10;$i++)
 echo <<<EOD
 </table>
 </td>
+<td>
+<table border="1">
+    <tr>
+        <th>Count</th>
+        <th>date</th>
+    </tr>
 EOD;
-//<td>
-//<table border="1">
-//    <tr>
-//        <th>Count</th>
-//        <th>date</th>
-//    </tr>
-//EOD;
 //    クエリを作成する。日付ごとのアクセス総数
-//$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by d_count desc " ;
+$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by d_count desc " ;
 //    クエリの実行
-//$result = mysql_query ( $query ) ;
-//if (!$result){
-//    die ("Could not query the database: <br />". mysql_error(  ));
-//}
+$result = mysql_query ( $query ) ;
+if (!$result){
+    die ("Could not query the database: <br />". mysql_error(  ));
+}
 
 
 //    結果から行を取得して表示する
-//for ($i=0;$i<10;$i++)
-//{
-//    $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
-//    $a_date = $row["a_date"] ;
-//    $a_count = $row["d_count"] ;
-//    echo "<tr>" ;
-//    echo "<td>$a_count</td>" ;
-//    echo "<td>$a_date</td>" ;
-//    echo "</tr>" ;
-//}
-
-//echo <<<EOD    
-//</table>
-//</td>
+for ($i=0;$i<3;$i++)
+{
+    $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
+    $a_date = $row["a_date"] ;
+    $a_count = $row["d_count"] ;
+    echo "<tr>" ;
+    echo "<td>$a_count</td>" ;
+    echo "<td>$a_date</td>" ;
+    echo "</tr>" ;
+}
+ 
 echo <<<EOD
+</table>
+</td>
 </tr>
 </table>
 <hr />
