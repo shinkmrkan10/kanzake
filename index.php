@@ -80,6 +80,7 @@ else
 echo ('<img src="');
 echo ("gif/$image");
 echo ('" border=0><br>');
+$connection->disconnect( );
 ?>
 Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
 </th><th>
