@@ -45,7 +45,7 @@ for ($i=0;$i<10;$i++)
     echo "<td>$a_date</td>" ;
     echo "<td>$a_count</td>" ;
     echo "<td>" ;
-    for ($j=1;$j<$a_count;$j++)
+    for ($j=0;$j<$a_count;$j++)
     {
         echo "*" ;
     }
