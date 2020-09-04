@@ -7,4 +7,4 @@ out/*.log
 # 拡張子が.outのファイルを除外する
 *.out
 # db_login.phpのファイルを除外する
-db_login
+db_login.php
