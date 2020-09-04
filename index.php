@@ -81,7 +81,7 @@ echo ('<img src="');
 echo ("gif/$image");
 echo ('" border=0><br>');
 $connection->disconnect( );
-?>
+echo <<<EOD
 Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
 </th><th>
 <img src="gif/hito.gif" alt="人" border=0>
@@ -102,3 +102,5 @@ Copyright(C) 1998-2004 Kanzake Fukyu Kyoukai, All Rights Reserved.
 </center>
 </body>
 </html>
+EOD;
+?>
