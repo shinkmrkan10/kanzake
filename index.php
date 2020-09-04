@@ -51,6 +51,7 @@ $a_ref = $_SERVER["HTTP_REFERER"];
 $time_st_p = $a_date . " " . $a_time ;
 $m_date = date("Y-m", $time_st);
 $m_month = date("F", $time_st);
+$month = date("m",$time_st);
 
 $query = "insert into counter values(NULL,'$time_st_p','$a_host','$a_ref','$a_date')";
 $result = $connection->query($query);
@@ -60,8 +61,6 @@ if (DB::isError($result))
 {
     die ("Could not query the database : <br>".$query. " ".DB::errorMessage($result));
 }
-$timestamp=time( );
-$month=date("m",$timestamp);
 if ($month>=3 & $month<=5)
 {
     $image='hana-gaeru.gif';
