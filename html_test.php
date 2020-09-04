@@ -2,13 +2,6 @@
 include('html_header.php');
 $html_title='Display of access log';
 html_header($html_title);
-echo <<<EOD
-<body>
-<table>
-<tr><td>
-<table>
-
-EOD;
 //    ログイン情報をインクルードする
 include('db_login.php');
 //    接続する
@@ -21,35 +14,12 @@ $db_select = mysql_select_db ( $db_database ) ;
 if (!$db_select){
     die ("Could not select the database: <br />". mysql_error(  ));
 }
-//    クエリを作成する。日付ごとのアクセス総数
-$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by a_date desc " ;
-//    クエリの実行
-$result = mysql_query ( $query ) ;
-if (!$result){
-    die ("Could not query the database: <br />". mysql_error(  ));
-}
 
-
-//    結果から行を取得して表示する
-for ($i=0;$i<10;$i++)
-{
-    $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
-    $a_date = $row["a_date"] ;
-    $a_count = $row["d_count"] ;
-    echo "<tr>" ;
-    echo "<td>$a_date</td>" ;
-    echo "<td>($a_count)</td>" ;
-    echo "<td>" ;
-    for ($j=0;$j<$a_count;$j++)
-    {
-        echo "*" ;
-    }
-    echo "</td>" ;
-    echo "</tr>" ;
-}
 echo <<<EOD
-</table>
-</td>
+<body>
+<table>
+<tr><td>
+<table>
 <td>
 <table border="1">
     <tr>
@@ -78,6 +48,36 @@ for ($i=0;$i<3;$i++)
     echo "</tr>" ;
 }
  
+echo <<<EOD
+</table>
+</td>
+
+EOD;
+//    クエリを作成する。日付ごとのアクセス総数
+$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by a_date desc " ;
+//    クエリの実行
+$result = mysql_query ( $query ) ;
+if (!$result){
+    die ("Could not query the database: <br />". mysql_error(  ));
+}
+
+//    結果から行を取得して表示する
+for ($i=0;$i<10;$i++)
+{
+    $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
+    $a_date = $row["a_date"] ;
+    $a_count = $row["d_count"] ;
+    echo "<tr>" ;
+    echo "<td>$a_date</td>" ;
+    echo "<td>($a_count)</td>" ;
+    echo "<td>" ;
+    for ($j=0;$j<$a_count;$j++)
+    {
+        echo "*" ;
+    }
+    echo "</td>" ;
+    echo "</tr>" ;
+}
 echo <<<EOD
 </table>
 </td>
