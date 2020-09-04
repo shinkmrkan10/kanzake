@@ -2,8 +2,8 @@
 include('html_header.php');
 $html_title='燗酒普及協会(since Sep.9 1998)';
 html_header($html_title);
-?>
 
+echo <<<EOD
 <body bgcolor="#5f0000" text="#00fffff" link="#00ff00" alink="#0000ff" vlink="#cfcfcf">
 <center>
 <hr width=80%>
@@ -24,7 +24,7 @@ html_header($html_title);
 <tr><th>
 <img src="gif/mise.gif" alt="店" border=0>
 </th><th colspan=3>
-<?php
+EOD;
 error_reporting(0);
 require_once ('db_login.php');
 
