@@ -1,11 +1,8 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.01 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/TR/html401/loose.dtd" xml:lang="ja" lang="ja">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Displaying in a HTML table</title>
-</head>
+﻿<?php
+include('html_header.php');
+$html_title='Display of access log';
+html_header($html_title);
+?>
 <body>
 <table>
 <tr><td>
