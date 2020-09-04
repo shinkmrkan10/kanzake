@@ -26,7 +26,7 @@ $db_select = mysql_select_db ( $db_database ) ;
 if (!$db_select){
     die ("Could not select the database: <br />". mysql_error(  ));
 }
-//    クエリを作成する
+//    クエリを作成する。日付ごとのアクセス総数
 $query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by a_date desc " ;
 //    クエリの実行
 $result = mysql_query ( $query ) ;
@@ -46,7 +46,7 @@ for ($i=0;$i<10;$i++)
     echo "<td>$a_count</td>" ;
     echo "</tr>" ;
 }
-//    クエリを作成する
+//    クエリを作成する。アクセスログ全体
 $query = "SELECT  *  FROM  counter order by counter_id desc " ;
 //    クエリの実行
 $result = mysql_query ( $query ) ;
@@ -79,13 +79,13 @@ for ($i=0;$i<100;$i++)
     echo "<td>$a_ref</td>" ;
     echo "</tr>" ;
 }
-//    クエリを作成する
+//    クエリを作成する。アクセスログの古い部分を削除する
 //$query = "DELETE  FROM  counter where counter_id < $counter_id " ;
 //    クエリの実行
-$result = mysql_query ( $query ) ;
-if (!$result){
-    die ("Could not query the database: <br />". mysql_error(  ));
-}
+//$result = mysql_query ( $query ) ;
+//if (!$result){
+//    die ("Could not query the database: <br />". mysql_error(  ));
+//}
 
 //    接続を閉じる
 mysql_close ( $connection ) ;
