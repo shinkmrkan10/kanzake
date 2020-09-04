@@ -17,6 +17,7 @@ if (!$db_select){
 
 echo <<<EOD
 <body>
+<hr />
 <table>
 <tr><td>
 <table border="1">
