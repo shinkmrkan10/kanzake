@@ -13,6 +13,6 @@ if (DB::isError($result))
 {
     die ("Could not query the database : <br>".$query. " ".DB::errorMessage($result));
 }
-echo ("Table created successfully!");
+echo ("Table updated successfully!");
 $connection->disconnect( );
 ?>
