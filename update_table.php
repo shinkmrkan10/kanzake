@@ -6,8 +6,8 @@ if  ( !$connection )
 {
     die ("Could not connect to the database :  <br>" . DB::errorMessage( ));
 }
-$query = 'update counter SET a_date = "2020-09-02" 
-                            where accessed LIKE "2020-09-02%"';
+$query = 'update counter SET a_date = "2020-09-03" 
+                            where accessed LIKE "2020-09%"';
 $result = $connection->query($query);
 if (DB::isError($result))
 {
