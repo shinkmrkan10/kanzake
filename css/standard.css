@@ -1,0 +1,21 @@
+body{
+   color : #00ffff;
+   background-color : #5f0000;
+}
+
+a:link { color : #00ff00; }
+a:visited { color : #cfcfcf; }
+a:active { color : #0000ff; }
+a:hover { background-color : #ff0000; }
+a:hover:focus { background-color : #ffff00; }
+input:hover { bacground-color : #ff0000; }
+input:hover:focus { bacground-color : #ff0000; }
+
+hr{width : 80%}
+p{text-align : center}
+div{align : center}
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}

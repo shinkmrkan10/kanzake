@@ -1,14 +1,16 @@
 ﻿<?php
 include('html_header.php');
 $html_title='燗酒普及協会(since Sep.9 1998)';
-html_header($html_title);
+$style_sheet='standard';
+html_header($html_title,$style_sheet);
 
 echo <<<EOD
-<body bgcolor="#5f0000" text="#00fffff" link="#00ff00" alink="#0000ff" vlink="#cfcfcf">
-<center>
-<hr width=80% />
+<body>
+<hr />
+<p>
 <a href="kanzake.htm"><img src="jpeg/kanzake.jpg" border=0></a>
-<hr width=80% />
+</p>
+<hr />
 <table cellpadding=10>
 <tr><th>
 <a href="kan/"><img src="gif/kan.gif" alt="燗" border=0></a>
@@ -86,19 +88,20 @@ Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
 <img src="gif/hito.gif" alt="人" border=0>
 </th></tr>
 </table>
-<hr width=80% />
+<hr />
 <p>
 <a href="kanzake.htm">ごあいさつ</a>
 　｜　<a href="https://shinkmrkan10.blogspot.jp">燗酒普及協会ブログ</a>
-</p>
 次の活動予定　：現在の情勢を考慮し活動自粛中です。<br />
 2019年10月6日(日)<a href="http://www.taruichi.co.jp/blog/2016/07/post-1594.html">樽一会</a>にて燗付けいたしました。<br />
 2019年6月30日(日)<a href="jpeg/nf2018.jpg">日本酒フェスティバル</a>、協力参加いたしました。<br />
-<hr width=80% />
+</p>
+<hr />
+<p>
 　お酒は２０歳になってから．お酒はおいしく適量を．<br />
-Copyright(C) 1998-2004 Kanzake Fukyu Kyoukai, All Rights Reserved.
-<ADDRESS>お問い合わせ：燗酒普及協会事務局 (<A HREF="mailto:info@kanzake.org">info@kanzake.org</A>)</ADDRESS>
-</center>
+Copyright(C) 1998-2004 Kanzake Fukyu Kyoukai, All Rights Reserved. <br />
+お問い合わせ：燗酒普及協会事務局 (<A HREF="mailto:info@kanzake.org">info@kanzake.org</A>)
+</p>
 </body>
 </html>
 EOD;
