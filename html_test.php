@@ -75,7 +75,7 @@ for ($i=0;$i<10;$i++)
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
-        if (j%5 == 2){
+        if ($j%5 == 2){
             echo "*" ;
         }
     }
