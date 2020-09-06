@@ -75,14 +75,17 @@ for ($i=0;$i<10;$i++)
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
+        if (($j+1)%100 == 0){
+            echo "||" ;
+        }
+        elseif (($j+1)%10 == 0){
+            echo "|" ;
+        }
+        if ($j == 0){
+            echo "|" ;
+        }
         if ($j%5 == 2){
             echo "*" ;
-        }
-        if ($j%10 == 0){
-            echo "|" ;
-        }
-        if ($j%100 == 0){
-            echo "|" ;
         }
     }
     echo "</td>" ;
