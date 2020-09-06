@@ -36,7 +36,7 @@ if (!$result){
 
 
 //    結果から行を取得して表示する
-for ($i=0;$i<3;$i++)
+for ($i=0;$i<4;$i++)
 {
     $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
     $a_date = $row["a_date"] ;
@@ -75,7 +75,9 @@ for ($i=0;$i<10;$i++)
     echo "<td>" ;
     for ($j=0;$j<$a_count;$j++)
     {
-        echo "*" ;
+        if (j%5 == 2){
+            echo "*" ;
+        }
     }
     echo "</td>" ;
     echo "</tr>" ;
