@@ -62,7 +62,7 @@ echo '<br/><strong>Access graph </strong>(last 10 days access) 最近のアク�
 
 echo "<table><br />";
 //    クエリを作成する。日付ごとのアクセス総数
-$query = "SELECT  accessed,count(accessed) as d_count  FROM  counter group by a_date order by accessed desc " ;
+$query = "SELECT  a_date,count(a_date) as d_count  FROM  counter group by a_date order by accessed desc " ;
 //    クエリの実行
 $result = $connection->query($query);
 if (!$result){
@@ -74,7 +74,7 @@ for ($i=0;$i<10;$i++)
 {
     $result_row = $result->fetchRow(DB_FETCHMODE_ASSOC);
     echo "<tr><td>" ;
-    echo $result_row["accessed"] ;
+    echo $result_row["a_date"] ;
     printf("</td><td><pre><strong>(%3d)</strong></pre></td>",$result_row["d_count"]) ;
     echo "<td>" ;
     for ($j=0;$j<$result_row["d_count"];$j++)
