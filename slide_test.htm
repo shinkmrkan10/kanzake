@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>燗酒普及協会(since Sep.9 1998)</title>
+<SCRIPT Language="JavaScript">
+const pics_src = ["gif/hana-gaeru.gif","gif/natsu-gaeru.gif","gif/kann-gaeru.gif","gif/yuki-gaeru.gif"];
+let num = -1;
+ 
+ 
+function slideshow_timer(){
+  if (num === 3){
+    num = 0;
+  } 
+  else {
+    num ++;
+  }
+  document.getElementById("mypic").src = pics_src[num];
+}
+ 
+setInterval(slideshow_timer, 3000);
+</SCRIPT>
+</head>
+<body onLoad="scroller()" bgcolor="#5f0000" text="#00fffff" link="#00ff00" alink="#0000ff" vlink="#cfcfcf">
+
+<center>
+<hr width=80%>
+<a href="kanzake.htm"><img src="jpeg/kanzake.jpg" alt="燗酒普及協会" border=0></a>
+<hr width=80%>
+<table cellpadding=10>
+<tr><th>
+<a href="kan.htm"><img src="gif/kan.gif" alt="燗" border=0></a>
+</th><th>
+<a href="sake/"><img src="gif/sake.gif" alt="酒" border=0></a>
+</th><th>
+<a href="utsuwa/"><img src="gif/utsuwa.gif" alt="器" border=0></a>
+</th><th>
+<a href="enkai/"><img src="gif/utage.gif" alt="宴" border=0></a>
+</th><th>
+<a href="jiten.htm"><img src="gif/siru.gif" alt="知" border=0></a>
+</th></tr>
+<tr><th>
+<a href="mise/"><img src="gif/mise.gif" alt="店" border=0></a>
+</th><th colspan=3>
+<img id="mypic" data-src="gif/hana-gaeru.gif" width="360" height="120" class=" lazyloading" src="gif/hana-gaeru.gif">
+<br />Copyright(c)1998-2000 Chie Ikeda, Shin Kimura
+</th><th>
+<a href="hito/"><img src="gif/hito.gif" alt="人" border=0></a>
+</th></tr>
+</table>
+<hr width=80%>
+<p>
+<a href="kanzake.htm">ごあいさつ</a>　｜　<a href="hito/kantsukeshi/">燗酒普及協会認定燗付け師</a>　｜　<a href="link/">リンク</a>
+</p>
+<p>
+<a href="enkai/040119.htm"><blink>第二回燗酒を楽しむ会</blink></a>
+</p>
+<hr width=80%>
+Copyright(C) 1998-2004 Kanzake Fukyu Kyoukai, All Rights Reserved.
+<ADDRESS>お問い合わせ：燗酒普及協会事務局 (<A HREF="mailto:info@kanzake.org">info@kanzake.org</A>)</ADDRESS>
+</center>
+</body>
+</html>
