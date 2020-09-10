@@ -36,7 +36,7 @@ if (!$result){
 
 
 //    結果から行を取得して表示する
-for ($i=0;$i<5;$i++)
+for ($i=0;$i<8;$i++)
 {
     $row  =  mysql_fetch_array( $result, MYSQL_ASSOC ) ;
     $a_date = $row["a_date"] ;
