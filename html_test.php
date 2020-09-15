@@ -20,6 +20,7 @@ echo <<<EOD
 <hr />
 <table>
 <tr><td>
+<strong>Top 10 acceess</strong><br />　<br />
 <table border="1">
     <tr>
         <th>Count</th>
