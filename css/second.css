@@ -1,0 +1,27 @@
+body
+{
+   color : black;
+   background-color : gray;
+}
+
+hr{width : 80%}
+p{text-align : center}
+div{align : center}
+
+table
+{
+   margin-left: auto;
+   margin-right: auto;
+   background-color : white;
+}
+
+*.red
+{
+   color : red;
+}
+
+*.b-yellow
+{
+   background-color : yellow;
+}
+

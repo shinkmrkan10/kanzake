@@ -1,7 +1,8 @@
 ﻿<?php
 include('html_header.php');
 $html_title='Display of access log';
-html_header($html_title);
+$style_sheet='second';
+html_header($html_title,$style_sheet);
 //    ログイン情報をインクルードする
 include('db_login.php');
 //    接続する
@@ -19,10 +20,10 @@ echo <<<EOD
 <body>
 <hr />
 <table>
-<tr><td>
-<strong>Top 10 acceess</strong><br />　<br />
+<tr><td style="text-align:center">
+<strong>Top 10 access</strong><br />　<br />
 <table border="1">
-    <tr>
+    <tr class="b-yellow">
         <th>Count</th>
         <th>date</th>
     </tr>
@@ -43,7 +44,7 @@ for ($i=0;$i<10;$i++)
     $a_date = $row["a_date"] ;
     $a_count = $row["d_count"] ;
     echo "<tr>" ;
-    echo '<td align="right">'."$a_count</td>" ;
+    echo '<td style="text-align:end">'."$a_count</td>" ;
     echo "<td>$a_date</td>" ;
     echo "</tr>" ;
 }
@@ -73,7 +74,7 @@ for ($i=0;$i<15;$i++)
     echo "<tr>" ;
     echo "<td>$a_date</td>" ;
     printf("<td><pre><strong>(%3d)</strong></pre></td>",$a_count) ;
-    echo "<td>" ;
+    echo '<td class="red">' ;
     for ($j=0;$j<$a_count;$j++)
     {
         if (($j+1)%100 == 0){
@@ -99,7 +100,7 @@ echo <<<EOD
 </table>
 <hr />
 <table border="1">
-    <tr>
+    <tr class="b-yellow">
         <th>Counter</th>
         <th>Timestamp</th>
         <th>Access host</th>
@@ -123,7 +124,7 @@ for ($i=0;$i<100;$i++)
     $a_host = $row["a_host"] ;
     $a_ref = $row["a_ref"] ;
     echo "<tr>" ;
-    echo "<td>$counter_id</td>" ;
+    echo '<td style="text-align:end">'."$counter_id</td>" ;
     echo "<td>$accessed</td>" ;
     echo "<td>$a_host</td>" ;
     echo "<td>$a_ref</td>" ;
