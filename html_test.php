@@ -19,10 +19,10 @@ if (!$db_select){
 echo <<<EOD
 <body>
 <hr />
-<table>
-<tr><td style="text-align:center">
-<strong>Top 10 access</strong><br />　<br />
-<table border="1">
+
+<strong>Top 10 access</strong>
+<br />
+<table border="1" align="left">
     <tr class="b-yellow">
         <th>Count</th>
         <th>date</th>
@@ -51,9 +51,9 @@ for ($i=0;$i<10;$i++)
  
 echo <<<EOD
 </table>
-</td>
-<td>　　　</td>
-<td>
+
+<table class="b-gray" align="left"><tr><td>access graph</td></tr></table>
+
 <table>
 
 EOD;
@@ -95,9 +95,7 @@ for ($i=0;$i<15;$i++)
 }
 echo <<<EOD
 </table>
-</td>
-</tr>
-</table>
+
 <hr />
 <table border="1">
     <tr class="b-yellow">

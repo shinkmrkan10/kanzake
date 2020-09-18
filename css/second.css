@@ -5,13 +5,9 @@ body
 }
 
 hr{width : 80%}
-p{text-align : center}
-div{align : center}
 
 table
 {
-   margin-left: auto;
-   margin-right: auto;
    background-color : white;
 }
 
@@ -25,3 +21,25 @@ table
    background-color : yellow;
 }
 
+*.b-gray
+{
+   background-color : gray;
+}
+div#content {
+background-color: white;
+width: 1500px;
+overflow: hidden;
+}
+
+div#main {
+background-color: white;
+width: 500px;
+float: left;
+}
+
+div#next {
+color: black;
+background-color: white;
+width: 1000px;
+float: right;
+}
